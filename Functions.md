@@ -66,7 +66,8 @@ fn never_return() -> ! {
     // Implement this function, don't modify the fn signatures
     
 }
-c
+//_____________________________________________________________________________________________________________________________________________________________________
+//Solution:
 fn main() {
     never_return();
 }
@@ -100,4 +101,65 @@ fn get_option(tp: u8) -> Option<i32> {
 fn never_return_fn() -> ! {
     
 }
-:
+//_____________________________________________________________________________________________________________________________________________________________________
+//Solution:
+
+fn main() {
+    println!("Success!");
+}
+
+fn get_option(tp: u8) -> Option<i32> {
+    match tp {
+        1 => {
+            // TODO
+        }
+        _ => {
+            // TODO
+        }
+    };
+    
+    // Rather than returning a None, we use a diverging function instead
+    never_return_fn()
+}
+
+
+// IMPLEMENT this function in THREE ways
+fn never_return_fn() -> ! {
+    panic!()
+}
+//_____________________________________________________________________________________________________________________________________________________________________
+//Question:
+//5.🌟🌟
+fn main() {
+    // FILL in the blank
+    let b = __;
+
+    let v = match b {
+        true => 1,
+        // Diverging functions can also be used in match expression to replace a value of any value
+        false => {
+            println!("Success!");
+            panic!("we have no value for `false`, but we can panic");
+        }
+    };
+
+    println!("Exercise Failed if printing out this line!");
+}
+//_____________________________________________________________________________________________________________________________________________________________________
+//Solution:
+fn main() {
+    // FILL in the blank
+    let b : bool = false;
+
+    let _v = match b {
+        true => 1,
+        // Diverging functions can also be used in match expression to replace a value of any value
+        false => {
+            println!("Success!");
+            panic!("we have no value for `false`, but we can panic");
+        }
+    };
+
+    println!("Exercise Failed if printing out this line!");
+}
+
