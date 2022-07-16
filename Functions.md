@@ -1,7 +1,6 @@
 ```
 //Question:
 //1.🌟🌟🌟
-
 fn main() {
     // Don't modify the following two lines!
     let (x, y) = (1, 2);
